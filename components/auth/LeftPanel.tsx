@@ -8,7 +8,7 @@ export default function LeftPanel() {
       <div
         className="absolute inset-0"
         style={{
-          backgroundColor: '#C2E868',
+          backgroundColor: '#A8D83C',
           clipPath: 'polygon(0 0, 100% 0, 100% 14%, 0 24%)',
         }}
       />
@@ -16,7 +16,7 @@ export default function LeftPanel() {
       <div
         className="absolute inset-0"
         style={{
-          backgroundColor: '#CCEA82',
+          backgroundColor: '#C2E85A',
           clipPath: 'polygon(0 24%, 100% 14%, 100% 22%, 0 32%)',
         }}
       />
@@ -36,8 +36,8 @@ export default function LeftPanel() {
       </div>
 
       {/* Text content — shifted slightly above center using pb */}
-      <div className="relative z-10 flex flex-col justify-center flex-1 px-11 pb-[22%] pt-0">
-        <h1 className="text-[2.65rem] font-extrabold text-[#1A1A1A] leading-[1.17] mb-4">
+      <div className="relative z-10 flex flex-col justify-center flex-1 px-11 pb-[32%] pt-0">
+        <h1 className="text-[2.2rem] font-extrabold text-[#1A1A1A] leading-[1.17] mb-4">
           Welcome back,<br />
           ready to{' '}
           <span style={{ color: '#72B800' }}>learn?</span>
