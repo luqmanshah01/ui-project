@@ -5,12 +5,13 @@ export default function Home() {
   return (
     <div className="flex min-h-screen">
       <LeftPanel />
-      {/* Right panel — very slight off-white tint, not pure white */}
+
+      {/* Right panel — slight off-white tint, form anchored from top */}
       <div
-        className="flex flex-1 items-center justify-center px-8 py-16 lg:px-20"
+        className="flex flex-1 flex-col items-center justify-start px-6 pt-16 lg:pt-[13vh] pb-16"
         style={{ backgroundColor: '#FAFFF5' }}
       >
-        <div className="w-full max-w-[450px]">
+        <div className="w-full max-w-[460px]">
           <SignInForm />
         </div>
       </div>

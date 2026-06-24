@@ -14,17 +14,22 @@ export default function InputField({
   onChange,
 }: InputFieldProps) {
   return (
-    <div className="flex flex-col gap-[7px]">
-      <label className="text-[13.5px] font-semibold text-[#1C1C1C]">{label}</label>
+    <div className="flex flex-col gap-[8px]">
+      <label className="text-[13px] font-medium text-[#1A1A1A]">{label}</label>
       <input
         type={type}
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className="w-full px-4 py-[14px] border rounded-2xl text-[14px] text-gray-800 placeholder-gray-300 bg-white focus:outline-none transition-colors"
-        style={{ borderColor: '#E2E8E0' }}
-        onFocus={(e) => { e.target.style.borderColor = '#72B800' }}
-        onBlur={(e) => { e.target.style.borderColor = '#E2E8E0' }}
+        className="
+          w-full px-[16px] py-[14px]
+          border border-[#E4EDE0] rounded-2xl
+          text-[14px] text-[#1A1A1A] placeholder-[#C8D5C5]
+          bg-white
+          outline-none
+          focus:border-[#72B800] focus:ring-2 focus:ring-[#72B800]/10
+          transition-all duration-150
+        "
       />
     </div>
   )

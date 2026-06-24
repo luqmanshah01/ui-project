@@ -17,19 +17,19 @@ export default function SignInForm() {
 
   return (
     <div className="w-full">
-      {/* Header row */}
-      <div className="flex items-center justify-between mb-10">
-        <h1 className="text-[22px] font-bold text-[#1C1C1C] tracking-tight">Sign in</h1>
+      {/* Header */}
+      <div className="flex items-center justify-between mb-9">
+        <h1 className="text-[22px] font-bold text-[#1A1A1A] tracking-[-0.3px]">Sign in</h1>
         <Link
           href="/register"
-          className="text-[13.5px] font-semibold hover:opacity-80 transition-opacity"
-          style={{ color: '#72B800' }}
+          className="text-[13px] font-semibold transition-opacity hover:opacity-75"
+          style={{ color: '#6AB800' }}
         >
           I don&apos;t have an account
         </Link>
       </div>
 
-      <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-[18px]">
         <InputField
           label="Email"
           type="email"
@@ -43,20 +43,20 @@ export default function SignInForm() {
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        {/* Remember me + Forgot password row */}
-        <div className="flex items-center justify-between">
-          <label className="flex items-center gap-2 cursor-pointer select-none">
+        {/* Remember me + Forgot password */}
+        <div className="flex items-center justify-between pt-[2px]">
+          <label className="flex items-center gap-[7px] cursor-pointer select-none">
             <input
               type="checkbox"
               checked={rememberMe}
               onChange={(e) => setRememberMe(e.target.checked)}
-              className="w-[15px] h-[15px] border border-gray-300 rounded-sm cursor-pointer accent-[#72B800]"
+              className="w-[14px] h-[14px] border border-gray-300 rounded-[3px] cursor-pointer accent-[#72B800]"
             />
-            <span className="text-[13px] text-gray-400">Remember me</span>
+            <span className="text-[12.5px] text-[#9CA3AF]">Remember me</span>
           </label>
           <Link
             href="/forgot-password"
-            className="text-[13px] font-bold text-[#1C1C1C] hover:text-gray-600 transition-colors"
+            className="text-[12.5px] font-bold text-[#1A1A1A] hover:text-gray-500 transition-colors"
           >
             Forgot password?
           </Link>
@@ -65,17 +65,17 @@ export default function SignInForm() {
         {/* Continue button */}
         <button
           type="submit"
-          className="w-full py-[14px] rounded-full text-white font-semibold text-[15px] mt-1 transition-opacity hover:opacity-90 active:opacity-80"
-          style={{ backgroundColor: '#72B800' }}
+          className="w-full py-[15px] mt-[2px] rounded-full text-white font-semibold text-[15px] tracking-[0.1px] transition-opacity hover:opacity-90 active:opacity-80"
+          style={{ backgroundColor: '#6FC001' }}
         >
           Continue
         </button>
 
         {/* OR divider */}
-        <div className="flex items-center gap-4">
-          <div className="flex-1 h-px" style={{ backgroundColor: '#E0E0E0' }} />
-          <span className="text-[12px] text-gray-400 font-medium tracking-widest">OR</span>
-          <div className="flex-1 h-px" style={{ backgroundColor: '#E0E0E0' }} />
+        <div className="flex items-center gap-3">
+          <div className="flex-1 h-px" style={{ backgroundColor: '#DDE8D8' }} />
+          <span className="text-[11.5px] text-[#AABBA8] font-medium tracking-[0.08em]">OR</span>
+          <div className="flex-1 h-px" style={{ backgroundColor: '#DDE8D8' }} />
         </div>
 
         <GoogleButton />
