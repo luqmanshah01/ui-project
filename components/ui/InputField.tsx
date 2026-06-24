@@ -14,14 +14,17 @@ export default function InputField({
   onChange,
 }: InputFieldProps) {
   return (
-    <div className="space-y-1.5">
-      <label className="block text-sm font-medium text-gray-800">{label}</label>
+    <div className="flex flex-col gap-[7px]">
+      <label className="text-[13.5px] font-semibold text-[#1C1C1C]">{label}</label>
       <input
         type={type}
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className="w-full px-4 py-3.5 border border-gray-200 rounded-xl text-sm text-gray-900 placeholder-gray-300 bg-white focus:outline-none focus:border-[#72B800] focus:ring-1 focus:ring-[#72B800] transition-colors"
+        className="w-full px-4 py-[14px] border rounded-2xl text-[14px] text-gray-800 placeholder-gray-300 bg-white focus:outline-none transition-colors"
+        style={{ borderColor: '#E2E8E0' }}
+        onFocus={(e) => { e.target.style.borderColor = '#72B800' }}
+        onBlur={(e) => { e.target.style.borderColor = '#E2E8E0' }}
       />
     </div>
   )
