@@ -1,4 +1,4 @@
-export default function GoogleButton() {
+export default function GoogleButton({ label = 'Sign in with Google' }: { label?: string }) {
   return (
     <button
       type="button"
@@ -6,7 +6,7 @@ export default function GoogleButton() {
       style={{ border: '1.5px solid #E2E8E0' }}
     >
       <GoogleIcon />
-      Sign in with Google
+      {label}
     </button>
   )
 }

@@ -1,4 +1,17 @@
-export default function LeftPanel() {
+interface LeftPanelProps {
+  heading?: React.ReactNode
+  description?: string
+}
+
+export default function LeftPanel({
+  heading = (
+    <>
+      Welcome back,<br />
+      ready to <span style={{ color: '#72B800' }}>learn?</span>
+    </>
+  ),
+  description = "You've already started something great. Let's continue building your progress and move closer to your goals together.",
+}: LeftPanelProps) {
   return (
     <div
       className="relative hidden lg:flex flex-col w-[42%] min-h-screen overflow-hidden"
@@ -38,13 +51,10 @@ export default function LeftPanel() {
       {/* Text content — shifted slightly above center using pb */}
       <div className="relative z-10 flex flex-col justify-center flex-1 px-11 pb-[32%] pt-0">
         <h1 className="text-[2.2rem] font-extrabold text-[#1A1A1A] leading-[1.17] mb-4">
-          Welcome back,<br />
-          ready to{' '}
-          <span style={{ color: '#72B800' }}>learn?</span>
+          {heading}
         </h1>
         <p className="text-[#606060] text-[14.5px] leading-[1.72] max-w-[320px]">
-          You&apos;ve already started something great. Let&apos;s continue
-          building your progress and move closer to your goals together.
+          {description}
         </p>
       </div>
 
